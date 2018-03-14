@@ -8,7 +8,9 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class FileUtils {
+import org.apache.commons.io.FileUtils;
+
+public class CmiFileUtils extends FileUtils{
 
 
 	public  static String readFile(File sourceProjectFile) {   

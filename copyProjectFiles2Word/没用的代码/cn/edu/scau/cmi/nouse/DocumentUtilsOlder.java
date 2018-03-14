@@ -8,7 +8,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
-import cn.edu.scau.cmi.utils.FileUtils;
+import cn.edu.scau.cmi.utils.CmiFileUtils;
 import cn.edu.scau.cmi.utils.ProjectUtils;
 public class DocumentUtilsOlder {
 	   public  static void WriteDoc(StringBuilder allSourceFilecontent,String targePath) throws IOException{
@@ -39,7 +39,7 @@ public class DocumentUtilsOlder {
 			   fileNameRun.setText(file.getName());
 			   fileNameRun.setText("\r\n");
 			   fileContentRun.setBold(false);
-			   fileContentRun.setText(FileUtils.readFile(file));
+			   fileContentRun.setText(CmiFileUtils.readFile(file));
 		   }
 		   doc.write(os);  
 		   doc.close();

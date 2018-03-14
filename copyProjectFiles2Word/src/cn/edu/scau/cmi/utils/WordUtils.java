@@ -70,7 +70,7 @@ public class WordUtils {
 			XWPFParagraph paraFileContent = doc.createParagraph();
 			
 			System.out.println(file.getName());
-			System.out.println(FileUtils.readFile(file));
+			System.out.println(CmiFileUtils.readFile(file));
 			
 			//设置文件名标题
 			paraFileName.setStyle("2");
@@ -85,7 +85,7 @@ public class WordUtils {
 			
 			//写文件内容
 			fileContentRun.setBold(false);
-			fileContentRun.setText(FileUtils.readFile(file));
+			fileContentRun.setText(CmiFileUtils.readFile(file));
 
 		}
 		doc.write(os);
