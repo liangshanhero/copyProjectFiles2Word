@@ -90,7 +90,7 @@ public class WordUtils {
 		}
 		doc.write(os);
 		doc.close();
-		System.out.println("OK");
+		System.out.println("恭喜你，所有的文本文件内容都写入到了指定的文件");
 
 	}
 
