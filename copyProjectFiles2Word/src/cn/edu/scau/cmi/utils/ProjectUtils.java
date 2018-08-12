@@ -6,8 +6,9 @@ import java.util.ArrayList;
 public class ProjectUtils {
 	private static ArrayList<File> projectFiles = new ArrayList<File>();
 
-	// 获取指定目录下所有的文本文件，目前包含以一下几种类型的文件 。
-	public static ArrayList<File> getProjectFiles(String dirpath ) {
+	// 获取指定目录下所有的非.class文件和非.jar文件的文件数组
+// 获取指定目录下所有的文本文件，目前包含以一下几种类型的文件 。
+	public static ArrayList<File> getProjectFiles(String dirpath) {
 		File directory = new File(dirpath);// 建立当前目录中文件的File对象
 		if (directory.exists()) {
 			File[] files = directory.listFiles();// 取得目录中所有文件的File对象数组

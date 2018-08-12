@@ -73,4 +73,5 @@ public class CopyFiles2WordSwt {
 		//
 		return bindingContext;
 	}
+
 }
