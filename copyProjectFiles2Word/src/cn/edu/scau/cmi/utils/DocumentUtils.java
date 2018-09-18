@@ -15,11 +15,13 @@ import org.apache.poi.xwpf.usermodel.XWPFStyles;
 import org.apache.xmlbeans.XmlException;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTStyles;
 
+import cn.edu.scau.cmi.nouse.FileUtils;
+
 public class DocumentUtils {
 	 /** 
      * word整体样式 
      */  
-    private static CTStyles wordStyles = null;  
+    private static CTStyles style = null;  
   
     /** 
      * Word整体样式 
@@ -30,7 +32,7 @@ public class DocumentUtils {
             // 读取模板文档  
             template = new XWPFDocument(new FileInputStream(System.getProperty("user.dir")+"/format.docx"));  
             // 获得模板文档的整体样式  
-            wordStyles = template.getStyle();  
+            style = template.getStyle();  
         } catch (FileNotFoundException e) {  
             e.printStackTrace();  
         } catch (IOException e) {  
@@ -40,7 +42,7 @@ public class DocumentUtils {
         }  
     }  
 
-	public static void WriteDoc(StringBuilder allSourceFilecontent,	String targePath) throws IOException {
+	private static void WriteDoc(StringBuilder allSourceFilecontent,	String targePath) throws IOException {
 		String allFileContent = allSourceFilecontent.toString();
 		XWPFDocument doc = new XWPFDocument();
 		// 创建一个段落
@@ -58,10 +60,11 @@ public class DocumentUtils {
 		OutputStream os = new FileOutputStream(targePath);
 		XWPFDocument doc = new XWPFDocument();
 		XWPFStyles newStyles = doc.createStyles();  
-		newStyles.setStyles(wordStyles); 
+		newStyles.setStyles(style); 
 //		XWPFParagraph paraFileName = doc.createParagraph();
 //		XWPFParagraph paraFileContent = doc.createParagraph();
 		// StringBuilder sb=new StringBuilder("");
+//		获取所有的项目文件
 		ArrayList<File> projectFileList = ProjectUtils.getProjectFiles(project);
 		
 		for (File file : projectFileList) {
@@ -90,7 +93,7 @@ public class DocumentUtils {
 		}
 		doc.write(os);
 		doc.close();
-		System.out.println("OK");
+		System.out.println("所有的项目文件已经完整的写入到了文档");
 
 	}
 

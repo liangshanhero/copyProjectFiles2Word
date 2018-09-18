@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class ProjectUtils {
 	private static ArrayList<File> projectFiles = new ArrayList<File>();
+	private static ArrayList<String> fileTypes=new ArrayList<String>();
 
 	// 获取指定目录下所有的非.class文件和非.jar文件的文件数组
 // 获取指定目录下所有的文本文件，目前包含以一下几种类型的文件 。

@@ -10,7 +10,7 @@ import java.io.OutputStreamWriter;
 
 import org.apache.commons.io.FileUtils;
 
-public class CmiFileUtils extends FileUtils{
+public class CmiFileUtils{
 
 
 	public  static String readFile(File sourceProjectFile) {   
@@ -23,6 +23,7 @@ public class CmiFileUtils extends FileUtils{
 	            String line;   
 	            while ((line = reader.readLine()) != null) {   
 	                fileContent = fileContent+line+"\r\n";   
+//	                怎样添加字符，然后可以在word中变成段落呢
 	            }     
 	            read.close();   
 	        }   
@@ -49,6 +50,4 @@ public class CmiFileUtils extends FileUtils{
 	        e.printStackTrace();   
 	    }   
 	}  
-	
-	
 }

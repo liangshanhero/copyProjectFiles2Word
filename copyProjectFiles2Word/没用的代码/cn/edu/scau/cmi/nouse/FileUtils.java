@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.utils;
+package cn.edu.scau.cmi.nouse;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
