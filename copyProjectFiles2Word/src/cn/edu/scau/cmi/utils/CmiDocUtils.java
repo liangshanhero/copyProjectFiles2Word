@@ -17,7 +17,7 @@ import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTStyles;
 
 import cn.edu.scau.cmi.nouse.FileUtils;
 
-public class DocumentUtils {
+public class CmiDocUtils {
 	 /** 
      * word整体样式 
      */  
@@ -65,7 +65,7 @@ public class DocumentUtils {
 //		XWPFParagraph paraFileContent = doc.createParagraph();
 		// StringBuilder sb=new StringBuilder("");
 //		获取所有的项目文件
-		ArrayList<File> projectFileList = ProjectUtils.getProjectFiles(project);
+		ArrayList<File> projectFileList = CmiProjectUtils.getProjectFiles(project);
 		
 		for (File file : projectFileList) {
 			
