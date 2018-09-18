@@ -14,7 +14,7 @@ import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.GridData;
 
-public class CopyFiles2WordSwt {
+public class CmiCopyFiles2WordSwt {
 	private DataBindingContext m_bindingContext;
 
 	protected Shell shell;
@@ -24,7 +24,7 @@ public class CopyFiles2WordSwt {
 		Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
 			public void run() {
 				try {
-					CopyFiles2WordSwt window = new CopyFiles2WordSwt();
+					CmiCopyFiles2WordSwt window = new CmiCopyFiles2WordSwt();
 					window.open();
 				} catch (Exception e) {
 					e.printStackTrace();
