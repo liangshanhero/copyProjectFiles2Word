@@ -3,7 +3,7 @@ package cn.edu.scau.cmi.utils;
 import java.io.File;
 import java.util.ArrayList;
 
-public class ProjectUtils {
+public class CmiProjectUtils {
 	private static ArrayList<File> projectFiles = new ArrayList<File>();
 	private static ArrayList<String> fileTypes=new ArrayList<String>();
 

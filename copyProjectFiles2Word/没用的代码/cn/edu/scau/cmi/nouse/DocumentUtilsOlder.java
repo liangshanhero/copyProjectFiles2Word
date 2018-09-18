@@ -8,7 +8,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
-import cn.edu.scau.cmi.utils.ProjectUtils;
+import cn.edu.scau.cmi.utils.CmiProjectUtils;
 public class DocumentUtilsOlder {
 	   public  static void WriteDoc(StringBuilder allSourceFilecontent,String targePath) throws IOException{
 		   String allFIleContent=allSourceFilecontent.toString();
@@ -30,7 +30,7 @@ public class DocumentUtilsOlder {
 		   XWPFDocument doc = new XWPFDocument();  
 		   XWPFParagraph para = doc.createParagraph(); 
 //		   StringBuilder sb=new StringBuilder("");
-		   ArrayList<File> projectFileList = ProjectUtils.getProjectFiles(project);
+		   ArrayList<File> projectFileList = CmiProjectUtils.getProjectFiles(project);
 		   for(File file:projectFileList){
 			   XWPFRun fileNameRun = para.createRun();
 			   XWPFRun fileContentRun = para.createRun();
